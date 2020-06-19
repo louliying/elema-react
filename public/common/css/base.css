@@ -1,0 +1,43 @@
+@charset "UTF-8";
+body, html{
+  line-height: 1;
+  font-weight: 200;
+  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif;
+}
+.clearfix{
+  display: inline-block;
+}
+  .clearfix:after{
+    display: block;
+    content: ".";
+    height: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5){
+  .mod-bd1:after{
+      -webkit-transform: scaleY(0.7);
+      transform: scaleY(0.7);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2){
+   .mod-bd1:after{
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+  }
+}
+
+.mod-bd1{
+    position:relative;
+}
+.mod-bd1:after{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    border-top: 1px solid rgba(7,17,27,0.1);
+    content: '';
+}
